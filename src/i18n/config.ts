@@ -3,7 +3,8 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import resourcesToBackend from 'i18next-resources-to-backend'
 
-export const LANGUAGES = ['zh-Hans', 'en', 'de', 'fr', 'es', 'zh-Hant', 'ja', 'ko', 'pt', 'it', 'ru']
+// export const LANGUAGES = ['zh-Hans', 'en', 'de', 'fr', 'es', 'zh-Hant', 'ja', 'ko', 'pt', 'it', 'ru']
+export const LANGUAGES = ['zh-Hans']
 
 i18next
   .use(LanguageDetector)
@@ -19,10 +20,10 @@ i18next
     debug: true,
     fallbackLng: {
       zh: ['zh-Hans'],
-      ['zh-CN']: ['zh-Hans'],
-      ['zh-HK']: ['zh-Hant'],
-      ['zh-TW']: ['zh-Hant'],
-      'de-CH': ['fr', 'it'],
-      default: ['en'],
+      // ['zh-CN']: ['zh-Hans'],
+      // ['zh-HK']: ['zh-Hant'],
+      // ['zh-TW']: ['zh-Hant'],
+      // 'de-CH': ['fr', 'it'],
+      default: ['zh-Hans'],
     },
   })
