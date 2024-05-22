@@ -1,5 +1,5 @@
 import React from 'react'
-import { Chat } from '../../components/chat'
+import { Chat } from '@/components/chat'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 import { getAppLayout } from '@/components/layout'
@@ -9,7 +9,7 @@ export default function ChatPage() {
   return (
     <>
       <Helmet>
-        <title>{t('welcome')}</title>
+        <title>{t('chat')}</title>
       </Helmet>
       <Chat />
     </>

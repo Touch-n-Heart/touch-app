@@ -1,5 +1,5 @@
 import React from 'react'
-import { Profile } from '../../components/profile'
+import { Profile } from '@/components/profile'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 import { getAppLayout } from '@/components/layout'
@@ -9,7 +9,7 @@ export default function ProfilePage() {
   return (
     <>
       <Helmet>
-        <title>{t('welcome')}</title>
+        <title>{t('profile')}</title>
       </Helmet>
       <Profile />
     </>

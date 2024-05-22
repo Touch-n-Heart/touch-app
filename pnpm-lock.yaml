@@ -26,6 +26,9 @@ importers:
       '@radix-ui/react-toast':
         specifier: ^1.1.5
         version: 1.1.5(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-spring/web':
+        specifier: 9.5.5
+        version: 9.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-query':
         specifier: ^4.29.3
         version: 4.36.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -74,6 +77,9 @@ importers:
       react-router-dom:
         specifier: ^6.10.0
         version: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-tinder-card:
+        specifier: ^1.6.4
+        version: 1.6.4(@react-spring/web@9.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
@@ -996,6 +1002,33 @@ packages:
 
   '@radix-ui/rect@1.0.1':
     resolution: {integrity: sha512-fyrgCaedtvMg9NK3en0pnOYJdtfwxUcNolezkNPUsoX57X8oQk+NkqcvzHXD2uKNij6GXmWU9NDru2IWjrO4BQ==}
+
+  '@react-spring/animated@9.5.5':
+    resolution: {integrity: sha512-glzViz7syQ3CE6BQOwAyr75cgh0qsihm5lkaf24I0DfU63cMm/3+br299UEYkuaHNmfDfM414uktiPlZCNJbQA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+  '@react-spring/core@9.5.5':
+    resolution: {integrity: sha512-shaJYb3iX18Au6gkk8ahaF0qx0LpS0Yd+ajb4asBaAQf6WPGuEdJsbsNSgei1/O13JyEATsJl20lkjeslJPMYA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+  '@react-spring/rafz@9.5.5':
+    resolution: {integrity: sha512-F/CLwB0d10jL6My5vgzRQxCNY2RNyDJZedRBK7FsngdCmzoq3V4OqqNc/9voJb9qRC2wd55oGXUeXv2eIaFmsw==}
+
+  '@react-spring/shared@9.5.5':
+    resolution: {integrity: sha512-YwW70Pa/YXPOwTutExHZmMQSHcNC90kJOnNR4G4mCDNV99hE98jWkIPDOsgqbYx3amIglcFPiYKMaQuGdr8dyQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+  '@react-spring/types@9.5.5':
+    resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
+
+  '@react-spring/web@9.5.5':
+    resolution: {integrity: sha512-+moT8aDX/ho/XAhU+HRY9m0LVV9y9CK6NjSRaI+30Re150pB3iEip6QfnF4qnhSCQ5drpMF0XRXHgOTY/xbtFw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   '@remix-run/router@1.16.1':
     resolution: {integrity: sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig==}
@@ -2937,6 +2970,9 @@ packages:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
 
+  p-sleep@1.1.0:
+    resolution: {integrity: sha512-bwP3GKZirBUYMtiUuBrheLUQdRXVeE/pmHOaLpNJzNfAD4b5AjDn6l823brXcQFade4G/g7GMNQ3KV86E8EaEw==}
+
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
@@ -3247,6 +3283,18 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
+        optional: true
+
+  react-tinder-card@1.6.4:
+    resolution: {integrity: sha512-IC6YXoBZ+51jm7XsT8i+8G/ov8rvAob+kBRdp9unQyjsLc7jmuYb1cNfu95Q3mdFDgwE0AzTIyl1o2Klm61+aQ==}
+    peerDependencies:
+      '@react-spring/native': ^9.5.5
+      '@react-spring/web': ^9.5.5
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@react-spring/native':
+        optional: true
+      '@react-spring/web':
         optional: true
 
   react@18.3.1:
@@ -4847,6 +4895,39 @@ snapshots:
   '@radix-ui/rect@1.0.1':
     dependencies:
       '@babel/runtime': 7.24.5
+
+  '@react-spring/animated@9.5.5(react@18.3.1)':
+    dependencies:
+      '@react-spring/shared': 9.5.5(react@18.3.1)
+      '@react-spring/types': 9.5.5
+      react: 18.3.1
+
+  '@react-spring/core@9.5.5(react@18.3.1)':
+    dependencies:
+      '@react-spring/animated': 9.5.5(react@18.3.1)
+      '@react-spring/rafz': 9.5.5
+      '@react-spring/shared': 9.5.5(react@18.3.1)
+      '@react-spring/types': 9.5.5
+      react: 18.3.1
+
+  '@react-spring/rafz@9.5.5': {}
+
+  '@react-spring/shared@9.5.5(react@18.3.1)':
+    dependencies:
+      '@react-spring/rafz': 9.5.5
+      '@react-spring/types': 9.5.5
+      react: 18.3.1
+
+  '@react-spring/types@9.5.5': {}
+
+  '@react-spring/web@9.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@react-spring/animated': 9.5.5(react@18.3.1)
+      '@react-spring/core': 9.5.5(react@18.3.1)
+      '@react-spring/shared': 9.5.5(react@18.3.1)
+      '@react-spring/types': 9.5.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@remix-run/router@1.16.1': {}
 
@@ -6983,6 +7064,8 @@ snapshots:
     dependencies:
       p-limit: 3.1.0
 
+  p-sleep@1.1.0: {}
+
   p-try@2.2.0: {}
 
   parent-module@1.0.1:
@@ -7200,6 +7283,13 @@ snapshots:
       tslib: 2.6.2
     optionalDependencies:
       '@types/react': 18.3.2
+
+  react-tinder-card@1.6.4(@react-spring/web@9.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
+    dependencies:
+      p-sleep: 1.1.0
+      react: 18.3.1
+    optionalDependencies:
+      '@react-spring/web': 9.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   react@18.3.1:
     dependencies:

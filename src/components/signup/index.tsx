@@ -24,6 +24,7 @@ function PersonalityList() {
   const { mutateAsync: signAndExecuteTransactionBlock } = useSignAndExecuteTransactionBlock()
   const { mutateAsync: waitForTransactionBlock } = useSuiClientMutation('waitForTransactionBlock')
   const [conductor, setConductor] = useState<TConductorInstance>()
+  const [claimed, setClaimed] = useState(false)
 
   const onInit = ({ conductor }: { conductor: TConductorInstance }) => {
     setConductor(conductor)
@@ -48,14 +49,15 @@ function PersonalityList() {
       digest: tx.digest,
     })
 
+    setClaimed(true)
     conductor?.run({
       speed: 0.3,
     })
   }
 
   return (
-    <div className="flex flex-col space-y-4">
-      <h2 className="px-6 text-xl">{t('choose-mbti')}</h2>
+    <div className="flex flex-col pb-6 space-y-4">
+      <h2 className="px-6 text-xl">Step1: {t('choose-mbti')}</h2>
       <div className="space-y-8">
         <Carousel>
           <CarouselContent>
@@ -77,6 +79,7 @@ function PersonalityList() {
           <CarouselNext className="bg-white right-4" />
         </Carousel>
 
+        <h2 className="px-6 text-xl">Step2: {t('claim-nft')}</h2>
         <div className="flex items-center justify-center">
           {account ? (
             <motion.button
@@ -95,9 +98,27 @@ function PersonalityList() {
           ) : (
             <ConnectButton />
           )}
+
+          <Realistic onInit={onInit} />
         </div>
 
-        <Realistic onInit={onInit} />
+        <h2 className="px-6 text-xl">Step3: {t('get-started')}</h2>
+        <div className="flex items-center justify-center">
+          <motion.button
+            className="w-[302px] p-[3px] relative select-none group"
+            disabled={!claimed}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <div className="absolute inset-0 rounded-lg group-disabled:bg-slate-500 group-disabled:[background-image:none] bg-gradient-to-r from-indigo-500 to-purple-500" />
+            <div
+              onClick={onMint}
+              className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
+            >
+              {t('get-started')}
+            </div>
+          </motion.button>
+        </div>
       </div>
     </div>
   )

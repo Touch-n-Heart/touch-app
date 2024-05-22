@@ -27,10 +27,10 @@ export function Slash() {
         >
           <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
           <div
-            onClick={onGetStarted}
+            onClick={onCreateAccount}
             className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
           >
-            {t('get-started')}
+            {t('create-account')}
           </div>
         </motion.button>
         <motion.button
@@ -40,10 +40,10 @@ export function Slash() {
         >
           <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
           <div
-            onClick={onCreateAccount}
+            onClick={onGetStarted}
             className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
           >
-            {t('create-account')}
+            {t('get-started')}
           </div>
         </motion.button>
       </div>
