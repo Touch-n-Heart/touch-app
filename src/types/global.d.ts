@@ -5,3 +5,9 @@ type AppRouteObject = RouteObject & {
     getLayout?: (Component: React.ReactElement) => JSX.Element
   }
 }
+
+declare global {
+  interface ImportMetaEnv {
+    VITE_NETWORK: 'devnet' | 'mainnet' | undefined
+  }
+}

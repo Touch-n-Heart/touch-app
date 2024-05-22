@@ -1,0 +1,482 @@
+[
+  {
+    "personality": "Adventurer",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Adventurer-1-Nobody.svg"
+  },
+  {
+    "personality": "Adventurer",
+    "level": "2",
+    "name": "Britney Spears",
+    "url": "/Adventurer-2-Britney%20Spears.svg"
+  },
+  {
+    "personality": "Adventurer",
+    "level": "2",
+    "name": "Jungkook",
+    "url": "/Adventurer-2-Jungkook.svg"
+  },
+  {
+    "personality": "Adventurer",
+    "level": "3",
+    "name": "Frida Kahlo",
+    "url": "/Adventurer-3-Frida%20Kahlo.svg"
+  },
+  {
+    "personality": "Adventurer",
+    "level": "3",
+    "name": "Kevin Costner",
+    "url": "/Adventurer-3-Kevin%20Costner.svg"
+  },
+  {
+    "personality": "Advocate",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Advocate-1-Nobody.svg"
+  },
+  {
+    "personality": "Advocate",
+    "level": "2",
+    "name": "Lady Gaga",
+    "url": "/Advocate-2-Lady%20Gaga.svg"
+  },
+  {
+    "personality": "Advocate",
+    "level": "2",
+    "name": "Nicole Kidman",
+    "url": "/Advocate-2-Nicole%20Kidman.svg"
+  },
+  {
+    "personality": "Advocate",
+    "level": "3",
+    "name": "Mother Teresa",
+    "url": "/Advocate-3-Mother%20Teresa.svg"
+  },
+  {
+    "personality": "Advocate",
+    "level": "3",
+    "name": "Nelson Mandela",
+    "url": "/Advocate-3-Nelson%20Mandela.svg"
+  },
+  {
+    "personality": "Architect",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Architect-1-Nobody.svg"
+  },
+  {
+    "personality": "Architect",
+    "level": "2",
+    "name": "Friedrich Nietzsche",
+    "url": "/Architect-2-Friedrich%20Nietzsche.svg"
+  },
+  {
+    "personality": "Architect",
+    "level": "2",
+    "name": "Michelle Obama",
+    "url": "/Architect-2-Michelle%20Obama.svg"
+  },
+  {
+    "personality": "Architect",
+    "level": "3",
+    "name": "Christopher Nolan",
+    "url": "/Architect-3-Christopher%20Nolan.svg"
+  },
+  {
+    "personality": "Architect",
+    "level": "3",
+    "name": "Elon Musk",
+    "url": "/Architect-3-Elon%20Musk.svg"
+  },
+  {
+    "personality": "Campaigner",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Campaigner-1-Nobody.svg"
+  },
+  {
+    "personality": "Campaigner",
+    "level": "2",
+    "name": "Kelly Clarkson",
+    "url": "/Campaigner-2-Kelly%20Clarkson.svg"
+  },
+  {
+    "personality": "Campaigner",
+    "level": "2",
+    "name": "Meg Ryan",
+    "url": "/Campaigner-2-Meg%20Ryan.svg"
+  },
+  {
+    "personality": "Campaigner",
+    "level": "3",
+    "name": "Robin Williams",
+    "url": "/Campaigner-3-Robin%20Williams.svg"
+  },
+  {
+    "personality": "Campaigner",
+    "level": "3",
+    "name": "Will Smith",
+    "url": "/Campaigner-3-Will%20Smith.svg"
+  },
+  {
+    "personality": "Commander",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Commander-1-Nobody.svg"
+  },
+  {
+    "personality": "Commander",
+    "level": "2",
+    "name": "Gordon Ramsay",
+    "url": "/Commander-2-Gordon%20Ramsay.svg"
+  },
+  {
+    "personality": "Commander",
+    "level": "2",
+    "name": "Jim Carrey",
+    "url": "/Commander-2-Jim%20Carrey.svg"
+  },
+  {
+    "personality": "Commander",
+    "level": "3",
+    "name": "Margaret Thatcher",
+    "url": "/Commander-3-Margaret%20Thatcher.svg"
+  },
+  {
+    "personality": "Commander",
+    "level": "3",
+    "name": "Steve Jobs",
+    "url": "/Commander-3-Steve%20Jobs.svg"
+  },
+  {
+    "personality": "Consul",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Consul-1-Nobody.svg"
+  },
+  {
+    "personality": "Consul",
+    "level": "2",
+    "name": "Danny Glover",
+    "url": "/Consul-2-Danny%20Glover.svg"
+  },
+  {
+    "personality": "Consul",
+    "level": "2",
+    "name": "Jennifer Lopez",
+    "url": "/Consul-2-Jennifer%20Lopez.svg"
+  },
+  {
+    "personality": "Consul",
+    "level": "3",
+    "name": "Bill Clinton",
+    "url": "/Consul-3-Bill%20Clinton.svg"
+  },
+  {
+    "personality": "Consul",
+    "level": "3",
+    "name": "Jennifer Garner",
+    "url": "/Consul-3-Jennifer%20Garner.svg"
+  },
+  {
+    "personality": "Debater",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Debater-1-Nobody.svg"
+  },
+  {
+    "personality": "Debater",
+    "level": "2",
+    "name": "Adam Savage",
+    "url": "/Debater-2-Adam%20Savage.svg"
+  },
+  {
+    "personality": "Debater",
+    "level": "2",
+    "name": "Sarah Silverman",
+    "url": "/Debater-2-Sarah%20Silverman.svg"
+  },
+  {
+    "personality": "Debater",
+    "level": "3",
+    "name": "Mark Twain",
+    "url": "/Debater-3-Mark%20Twain.svg"
+  },
+  {
+    "personality": "Debater",
+    "level": "3",
+    "name": "Thomas Edison",
+    "url": "/Debater-3-Thomas%20Edison.svg"
+  },
+  {
+    "personality": "Defender",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Defender-1-Nobody.svg"
+  },
+  {
+    "personality": "Defender",
+    "level": "2",
+    "name": "Lance Reddick",
+    "url": "/Defender-2-Lance%20Reddick.svg"
+  },
+  {
+    "personality": "Defender",
+    "level": "2",
+    "name": "Vin Diesel",
+    "url": "/Defender-2-Vin%20Diesel.svg"
+  },
+  {
+    "personality": "Defender",
+    "level": "3",
+    "name": "Anne Hathaway",
+    "url": "/Defender-3-Anne%20Hathaway.svg"
+  },
+  {
+    "personality": "Defender",
+    "level": "3",
+    "name": "Kate Middleton",
+    "url": "/Defender-3-Kate%20Middleton.svg"
+  },
+  {
+    "personality": "Entertainer",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Entertainer-1-Nobody.svg"
+  },
+  {
+    "personality": "Entertainer",
+    "level": "2",
+    "name": "Adele",
+    "url": "/Entertainer-2-Adele.svg"
+  },
+  {
+    "personality": "Entertainer",
+    "level": "2",
+    "name": "Jamie Foxx",
+    "url": "/Entertainer-2-Jamie%20Foxx.svg"
+  },
+  {
+    "personality": "Entertainer",
+    "level": "3",
+    "name": "Elton John",
+    "url": "/Entertainer-3-Elton%20John.svg"
+  },
+  {
+    "personality": "Entertainer",
+    "level": "3",
+    "name": "Marilyn Monroe",
+    "url": "/Entertainer-3-Marilyn%20Monroe.svg"
+  },
+  {
+    "personality": "Entrepreneur",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Entrepreneur-1-Nobody.svg"
+  },
+  {
+    "personality": "Entrepreneur",
+    "level": "2",
+    "name": "Jack Nicholson",
+    "url": "/Entrepreneur-2-Jack%20Nicholson.svg"
+  },
+  {
+    "personality": "Entrepreneur",
+    "level": "2",
+    "name": "Madonna",
+    "url": "/Entrepreneur-2-Madonna.svg"
+  },
+  {
+    "personality": "Entrepreneur",
+    "level": "3",
+    "name": "Bruce Willis",
+    "url": "/Entrepreneur-3-Bruce%20Willis.svg"
+  },
+  {
+    "personality": "Entrepreneur",
+    "level": "3",
+    "name": "Eddie Murphy",
+    "url": "/Entrepreneur-3-Eddie%20Murphy.svg"
+  },
+  {
+    "personality": "Executive",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Executive-1-Nobody.svg"
+  },
+  {
+    "personality": "Executive",
+    "level": "2",
+    "name": "Judge Judy",
+    "url": "/Executive-2-Judge%20Judy.svg"
+  },
+  {
+    "personality": "Executive",
+    "level": "2",
+    "name": "Rank Sinatra",
+    "url": "/Executive-2-Rank%20Sinatra.svg"
+  },
+  {
+    "personality": "Executive",
+    "level": "3",
+    "name": "James Monroe",
+    "url": "/Executive-3-James%20Monroe.svg"
+  },
+  {
+    "personality": "Executive",
+    "level": "3",
+    "name": "Sonia Sotomayor",
+    "url": "/Executive-3-Sonia%20Sotomayor.svg"
+  },
+  {
+    "personality": "Logician",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Logician-1-Nobody.svg"
+  },
+  {
+    "personality": "Logician",
+    "level": "2",
+    "name": "Avicii",
+    "url": "/Logician-2-Avicii.svg"
+  },
+  {
+    "personality": "Logician",
+    "level": "2",
+    "name": "Kristen Stewart",
+    "url": "/Logician-2-Kristen%20Stewart.svg"
+  },
+  {
+    "personality": "Logician",
+    "level": "3",
+    "name": "Albert Einstein",
+    "url": "/Logician-3-Albert%20Einstein.svg"
+  },
+  {
+    "personality": "Logician",
+    "level": "3",
+    "name": "Bill Gates",
+    "url": "/Logician-3-Bill%20Gates.svg"
+  },
+  {
+    "personality": "Logistician",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Logistician-1-Nobody.svg"
+  },
+  {
+    "personality": "Logistician",
+    "level": "2",
+    "name": "Natalie Portman",
+    "url": "/Logistician-2-Natalie%20Portman.svg"
+  },
+  {
+    "personality": "Logistician",
+    "level": "2",
+    "name": "Sting",
+    "url": "/Logistician-2-Sting.svg"
+  },
+  {
+    "personality": "Logistician",
+    "level": "3",
+    "name": "Angela Merkel",
+    "url": "/Logistician-3-Angela%20Merkel.svg"
+  },
+  {
+    "personality": "Logistician",
+    "level": "3",
+    "name": "George Washington",
+    "url": "/Logistician-3-George%20Washington.svg"
+  },
+  {
+    "personality": "Mediator",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Mediator-1-Nobody.svg"
+  },
+  {
+    "personality": "Mediator",
+    "level": "2",
+    "name": "Alicia Keys",
+    "url": "/Mediator-2-Alicia%20Keys.svg"
+  },
+  {
+    "personality": "Mediator",
+    "level": "2",
+    "name": "Tom Hiddleston",
+    "url": "/Mediator-2-Tom%20Hiddleston.svg"
+  },
+  {
+    "personality": "Mediator",
+    "level": "3",
+    "name": "Julia Roberts",
+    "url": "/Mediator-3-Julia%20Roberts.svg"
+  },
+  {
+    "personality": "Mediator",
+    "level": "3",
+    "name": "William Wordsworth",
+    "url": "/Mediator-3-William%20Wordsworth.svg"
+  },
+  {
+    "personality": "Protagonist",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Protagonist-1-Nobody.svg"
+  },
+  {
+    "personality": "Protagonist",
+    "level": "2",
+    "name": "Ben Affleck",
+    "url": "/Protagonist-2-Ben%20Affleck.svg"
+  },
+  {
+    "personality": "Protagonist",
+    "level": "2",
+    "name": "Jennifer Lawrence",
+    "url": "/Protagonist-2-Jennifer%20Lawrence.svg"
+  },
+  {
+    "personality": "Protagonist",
+    "level": "3",
+    "name": "Barack Obama",
+    "url": "/Protagonist-3-Barack%20Obama.svg"
+  },
+  {
+    "personality": "Protagonist",
+    "level": "3",
+    "name": "Oprah Winfrey",
+    "url": "/Protagonist-3-Oprah%20Winfrey.svg"
+  },
+  {
+    "personality": "Virtuoso",
+    "level": "1",
+    "name": "Nobody",
+    "url": "/Virtuoso-1-Nobody.svg"
+  },
+  {
+    "personality": "Virtuoso",
+    "level": "2",
+    "name": "Daniel Craig",
+    "url": "/Virtuoso-2-Daniel%20Craig.svg"
+  },
+  {
+    "personality": "Virtuoso",
+    "level": "2",
+    "name": "MillaJovovich",
+    "url": "/Virtuoso-2-MillaJovovich.svg"
+  },
+  {
+    "personality": "Virtuoso",
+    "level": "3",
+    "name": "Michael Jordan",
+    "url": "/Virtuoso-3-Michael%20Jordan.svg"
+  },
+  {
+    "personality": "Virtuoso",
+    "level": "3",
+    "name": "Olivia Wilde",
+    "url": "/Virtuoso-3-Olivia%20Wilde.svg"
+  }
+]

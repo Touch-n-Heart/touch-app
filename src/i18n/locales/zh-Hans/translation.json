@@ -1,8 +1,11 @@
 {
   "title": "Touch | 约会，交友，遇见新朋友",
   "welcome": "欢迎 - Touch | 约会，交友，遇见新朋友",
-  "get-started": "开始使用",
-
+  "signup": "注册 - Touch | 约会，交友，遇见新朋友",
+  "get-started": "Get Started!",
+  "create-account": "Create Account",
+  "choose-mbti": "Choose Your MBTI",
+  "mint": "Claim NFT",
 
   "features": "特点",
   "modernstack": "现代高效的技术栈",

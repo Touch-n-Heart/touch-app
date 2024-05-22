@@ -5,6 +5,10 @@ import { getDefaultLayout } from './components/layout'
 import HomePage from './pages/home'
 import WelcomePage from './pages/welcome'
 import MatchPage from './pages/match'
+import CreateAccountPage from './pages/create-account'
+import FeedPage from './pages/feed'
+import ChatPage from './pages/chat'
+import ProfilePage from './pages/profile'
 
 import { AppRouteObject } from './types/global.d'
 
@@ -18,8 +22,28 @@ export const routerObjects: AppRouteObject[] = [
     Component: MatchPage,
   },
   {
+    path: '/feed',
+    Component: FeedPage,
+  },
+  {
+    path: '/chat',
+    Component: ChatPage,
+  },
+  {
+    path: '/profile',
+    Component: ProfilePage,
+  },
+  {
     path: '/home',
     Component: HomePage,
+  },
+  {
+    path: '/create-account',
+    Component: CreateAccountPage,
+  },
+  {
+    path: '/*',
+    Component: ErrorPage,
   },
 ]
 

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { useCallback, useMemo } from 'react'
 import { Popover, PopoverArrow, PopoverContent, PopoverTrigger } from '../ui/popover'
-import { cn } from 'src/lib/utils'
-import { LANGUAGES } from 'src/i18n/config'
+import { cn } from '@/lib/utils'
+import { LANGUAGES } from '@/i18n/config'
 import { Languages, ChevronDown } from 'lucide-react'
 import i18next from 'i18next'
 

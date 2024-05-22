@@ -9,26 +9,44 @@ export function Slash() {
   const navigate = useNavigate()
 
   const onGetStarted = () => {
-    navigate('/home')
+    navigate('/match')
+  }
+
+  const onCreateAccount = () => {
+    navigate('/create-account')
   }
 
   return (
-    <div className="relative flex items-center justify-center w-full h-full flex-col">
+    <div className="relative flex flex-col items-center justify-center w-full h-full">
       <LogoWithAnimate />
-      <motion.button
-        className="w-[302px] p-[3px] relative mt-20  select-none"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-        <div
-          onClick={onGetStarted}
-          className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
+      <div className="flex flex-col mt-20 space-y-4">
+        <motion.button
+          className="w-[302px] p-[3px] relative select-none"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
-          {/* {t('get-started')} */}
-          Get Started!
-        </div>
-      </motion.button>
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
+          <div
+            onClick={onGetStarted}
+            className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
+          >
+            {t('get-started')}
+          </div>
+        </motion.button>
+        <motion.button
+          className="w-[302px] p-[3px] relative select-none"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
+          <div
+            onClick={onCreateAccount}
+            className="[letter-spacing:0.12rem] px-8 py-2 text-2xl rounded-[6px] font-bold relative group transition duration-200 text-white bg-transparent"
+          >
+            {t('create-account')}
+          </div>
+        </motion.button>
+      </div>
     </div>
   )
 }
