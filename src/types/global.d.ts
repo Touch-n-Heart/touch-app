@@ -8,6 +8,6 @@ type AppRouteObject = RouteObject & {
 
 declare global {
   interface ImportMetaEnv {
-    VITE_NETWORK: 'devnet' | 'mainnet' | undefined
+    VITE_SUI_NETWORK: 'devnet' | 'mainnet' | undefined
   }
 }

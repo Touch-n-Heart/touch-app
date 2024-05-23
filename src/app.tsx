@@ -12,7 +12,7 @@ const { networkConfig } = createNetworkConfig({
   devnet: { url: getFullnodeUrl('devnet') },
   mainnet: { url: getFullnodeUrl('mainnet') },
 })
-const defaultNetwork = import.meta.env.VITE_NETWORK || 'mainnet'
+const defaultNetwork = import.meta.env.VITE_SUI_NETWORK || 'mainnet'
 
 export default function App() {
   const queryClient = useMemo(() => new QueryClient({}), [])

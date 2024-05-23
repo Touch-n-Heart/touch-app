@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TinderCard from 'react-tinder-card'
+import { LogoIcon } from '../logo'
 
 const db = [
   {
@@ -36,7 +37,10 @@ export function Match() {
   }, [])
 
   return (
-    <div className="flex flex-col items-center space-y-6">
+    <div className="flex flex-col items-center h-full justify-center space-y-6 pt-[48px] pb-[65px] relative">
+      <header className="h-[48px] absolute w-full left-0 top-0 px-6 py-4">
+        <LogoIcon className="w-[48px] h-[48px]" />
+      </header>
       <div className="w-[90vw] max-w-[260px] h-[300px] py-8">
         {characters.map((character) => (
           <TinderCard className="absolute" key={character.name}>

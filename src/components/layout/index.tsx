@@ -22,23 +22,23 @@ export const getBackgroundMaskLayout = (page: React.ReactElement) => {
 function BottomNavbar() {
   return (
     <div className="fixed bottom-0 w-full bg-white border-t border-gray-300">
-      <div className="flex justify-around py-2">
+      <div className="flex justify-around py-2 h-[65px]">
         {/* with icon and text */}
-        <Link to="/match" className="flex flex-col items-center justify-center">
+        <Link to="/match" className="flex flex-col items-center justify-center px-2 py-1">
           <Heart size={24} />
-          <div>Match</div>
+          {/* <div>Match</div> */}
         </Link>
-        <Link to="/feed" className="flex flex-col items-center justify-center">
+        <Link to="/feed" className="flex flex-col items-center justify-center px-2 py-1">
           <SquareGanttIcon size={24} />
-          <div>Feed</div>
+          {/* <div>Feed</div> */}
         </Link>
-        <Link to="/chat" className="flex flex-col items-center justify-center">
+        <Link to="/chat" className="flex flex-col items-center justify-center px-2 py-1">
           <MessageCircle size={24} />
-          <div>Chat</div>
+          {/* <div>Chat</div> */}
         </Link>
-        <Link to="/profile" className="flex flex-col items-center justify-center">
+        <Link to="/profile" className="flex flex-col items-center justify-center px-2 py-1">
           <Settings size={24} />
-          <div>Profile</div>
+          {/* <div>Profile</div> */}
         </Link>
       </div>
     </div>

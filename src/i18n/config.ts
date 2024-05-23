@@ -20,10 +20,10 @@ i18next
     debug: true,
     fallbackLng: {
       zh: ['zh-Hans'],
-      // ['zh-CN']: ['zh-Hans'],
-      // ['zh-HK']: ['zh-Hant'],
-      // ['zh-TW']: ['zh-Hant'],
-      // 'de-CH': ['fr', 'it'],
+      ['zh-CN']: ['zh-Hans'],
+      ['zh-HK']: ['zh-Hant'],
+      ['zh-TW']: ['zh-Hant'],
+      'de-CH': ['fr', 'it'],
       default: ['zh-Hans'],
     },
   })

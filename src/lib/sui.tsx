@@ -1,5 +1,5 @@
-import { SuiClient, getFullnodeUrl } from '@mysten/sui.js/client';
-import { Ed25519Keypair } from '@mysten/sui.js/keypairs/ed25519';
+import { SuiClient, getFullnodeUrl } from '@mysten/sui.js/client'
+import { Ed25519Keypair } from '@mysten/sui.js/keypairs/ed25519'
 // import { fromB64 } from '@mysten/sui.js/utils';
 // import * as dotenv from 'dotenv';
 // dotenv.config();
@@ -20,6 +20,6 @@ const mnemonic = 'ocean swallow exile fence front hundred gun joke present turn 
 // from mnemonic
 const signer = Ed25519Keypair.deriveKeypair(mnemonic)
 
-const suiClient = new SuiClient({ url: getFullnodeUrl(network) });
+const suiClient = new SuiClient({ url: getFullnodeUrl(network) })
 
 export { suiClient, signer, network }
