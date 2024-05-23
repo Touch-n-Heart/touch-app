@@ -232,7 +232,9 @@ function PersonalityList() {
                       target="_blank"
                       className="block overflow-hidden text-blue-300 underline text-ellipsis whitespace-nowrap"
                       rel="noopenner norefferer noreferrer"
-                      href={`https://suiscan.xyz/${import.meta.env.VITE_SUI_NETWORK}/object/${fields.id.id}`}
+                      href={`https://suiscan.xyz/${import.meta.env.VITE_SUI_NETWORK}/object/${
+                        (fields.id as unknown as Record<string, string>).id
+                      }`}
                     >
                       {(fields.id as unknown as Record<string, string>).id}
                     </a>
