@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { LogoIcon } from '../logo'
 import data from '@/config/mbti-data.json'
 import { useTranslation } from 'react-i18next'
@@ -15,6 +15,10 @@ import { TConductorInstance } from 'react-canvas-confetti/dist/types'
 import Realistic from 'react-canvas-confetti/dist/presets/realistic'
 import { TransactionBlock } from '@mysten/sui.js/transactions'
 import { Link } from 'react-router-dom'
+import { ADMIN_CAP, MINT_TO, NFT_INFOS, NFT_OBJ_TYPE } from '@/lib/constants'
+import { suiClient, signer } from '@/lib/sui'
+import { getEnv } from '@/lib/env'
+
 
 function PersonalityList() {
   // use memo
@@ -25,34 +29,57 @@ function PersonalityList() {
   const { mutateAsync: waitForTransactionBlock } = useSuiClientMutation('waitForTransactionBlock')
   const [conductor, setConductor] = useState<TConductorInstance>()
   const [claimed, setClaimed] = useState(false)
+  const [walletAddr, setWalletAddr] = useState('')
+
+  useEffect(() => {
+    if (account) {
+      console.log(getEnv())
+      setWalletAddr(account.address)
+    }
+  }, [account])
 
   const onInit = ({ conductor }: { conductor: TConductorInstance }) => {
     setConductor(conductor)
   }
 
   const onMint = async () => {
-    const transactionBlock = new TransactionBlock()
-    transactionBlock.moveCall({
+    const txb = new TransactionBlock();
+
+    const nft = NFT_INFOS.filter(item => 
+      item.personality == 'Virtuoso' && item.level == '2'
+    )
+    console.log(nft)
+    txb.moveCall({
       arguments: [
-        transactionBlock.object('0x4a341d8551eb2dedd0095c57e06a64bd4aa454e629beb48694040c65045a2cb1'),
-        transactionBlock.pure.string('Daniel Craig'),
-        transactionBlock.pure.string('Virtuoso'),
-        transactionBlock.pure.string('Bold and practical experimenters, masters of all kinds of tools.'),
+        txb.object(ADMIN_CAP),
+        txb.pure.string(nft[0].fame),
+        txb.pure.string(nft[0].personality),
+        txb.pure.u8(Number(nft[0].level)),
+        txb.pure.string(nft[0].desc),
+        txb.pure.string(nft[0].url.slice(0, nft[0].url.lastIndexOf('/'))),
+        txb.pure.address(walletAddr)
       ],
-      target: '0x59b94aaeaa16165fd4e6b384b1ab889790f5f6b01c02a3a1636ab811dfb8e5a1::touch_level::claim',
-    })
+      target: MINT_TO 
+    });
 
-    const tx = await signAndExecuteTransactionBlock({
-      transactionBlock,
+    const txRes = await suiClient.signAndExecuteTransactionBlock({
+      signer,
+      transactionBlock: txb,
     })
-    await waitForTransactionBlock({
-      digest: tx.digest,
-    })
-
-    setClaimed(true)
-    conductor?.run({
-      speed: 0.3,
-    })
+    if (txRes) {
+      console.log(txRes)
+      setClaimed(true)
+      conductor?.run({
+        speed: 0.3,
+      })
+      // setImageUrl(nft[0].url)
+      let nft_objs = await suiClient.getOwnedObjects({
+        owner: walletAddr,
+        options: { showType: true, showContent: true },
+        filter: {StructType: NFT_OBJ_TYPE}
+      })
+      console.log(nft_objs.data.map(obj => obj.data?.content))
+    }
   }
 
   return (
