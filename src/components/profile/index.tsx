@@ -112,7 +112,7 @@ export function Profile() {
         txb.object(TOUCH_NEED_FOR),
         txb.object(TOUCH_SUPPLY),
         txb.object(coin_obj),
-        txb.pure.string(currentNFTInfo.fame),
+        txb.pure.string(targetNFT[0].fame),
         // TODO: get one randomly from targetNFT or from input form
         txb.pure.u8(Number(targetNFT[0].level)),
       ],
