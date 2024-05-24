@@ -289,9 +289,11 @@ function PersonalityList() {
               <>
                 <div className="flex flex-col space-y-4">
                   <div className="mx-auto p-6 border rounded-lg w-[200px] h-[200px]">
-                    <img src={'/images/personality/Adventurer-2-Britney%20Spears.svg'} />
+                    <img src={`${fields.base_url}/${fields.personality}-${fields.level}-${fields.fame}.svg`} />
                   </div>
-                  <h2>Fame: {fields.fame}</h2>
+                  <h2>Personality: {fields.personality}</h2>
+                  <div>Level: {fields.level}</div>
+                  <div>Fame: {fields.fame}</div>
                   <div>Desc: {fields.desc}</div>
                   <div className="flex">
                     <span>Id: </span>
