@@ -11,15 +11,20 @@ import {
   CarouselApi,
 } from '@/components/ui/carousel'
 import { BackgroundGradient } from '../ui/background-gradient'
-import { ConnectButton, useCurrentAccount, useSuiClientMutation } from '@mysten/dapp-kit'
+import {
+  ConnectButton,
+  useCurrentAccount,
+  useSuiClientMutation,
+  useSuiClient,
+  useSignAndExecuteTransactionBlock,
+} from '@mysten/dapp-kit'
 import { motion } from 'framer-motion'
 import { TConductorInstance } from 'react-canvas-confetti/dist/types'
 import Realistic from 'react-canvas-confetti/dist/presets/realistic'
 import { TransactionBlock } from '@mysten/sui.js/transactions'
 import { Link } from 'react-router-dom'
 import { Loader2Icon } from 'lucide-react'
-import { ADMIN_CAP, MINT_TO, NFT_OBJ_TYPE } from '@/lib/constants'
-import { signer } from '@/lib/sui'
+import { CLAIM_FN, ELIGIBLE_OBJ, NFT_INFOS, NFT_OBJ_TYPE } from '@/lib/constants'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 
 function PersonalityList() {
@@ -28,7 +33,9 @@ function PersonalityList() {
   const { t } = useTranslation('translation')
   const account = useCurrentAccount()
   const { mutateAsync: waitForTransactionBlock } = useSuiClientMutation('waitForTransactionBlock')
-  const { mutateAsync: signAndExecuteTransactionBlock } = useSuiClientMutation('signAndExecuteTransactionBlock')
+  const suiClient = useSuiClient()
+  const { mutateAsync: signAndExecuteTransactionBlock } = useSignAndExecuteTransactionBlock()
+  // const { mutateAsync: signAndExecuteTransactionBlock } = useSuiClientMutation('signAndExecuteTransactionBlock')
   const { mutateAsync: getOwnedObjects } = useSuiClientMutation('getOwnedObjects')
   const [conductor, setConductor] = useState<TConductorInstance>()
   const [api, setApi] = useState<CarouselApi>()
@@ -82,6 +89,69 @@ function PersonalityList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account])
 
+  // const airdropNFT = async () => {
+  //   const txb = new TransactionBlock()
+  //   txb.moveCall({
+  //     arguments: [
+  //       txb.object(ADMIN_CAP),
+  //       txb.object(ELIGIBLE_OBJ),
+  //       txb.pure(ACCOUNTS),
+  //       txb.pure(NFT_LEVELS)
+  //     ],
+  //     target: UPDATE_ADDRS_FN,
+  //   })
+
+  //   await suiClient.signAndExecuteTransactionBlock({
+  //     signer,
+  //     transactionBlock: txb,
+  //   })
+  // }
+
+  // const feedAllNFTInfos = async () => {
+  //   const personalities = NFT_INFOS.map(info => info.personality)
+  //   const levels = NFT_INFOS.map(info => info.level)
+  //   const fames = NFT_INFOS.map(info => info.fame)
+  //   const urls = NFT_INFOS.map(info => info.url)
+  //   const descs = NFT_INFOS.map(info => info.desc)
+  //   // console.log(personalities, levels, fames, urls, descs)
+  //   const txb = new TransactionBlock()
+  //   txb.moveCall({
+  //     arguments: [
+  //       txb.object(ADMIN_CAP),
+  //       txb.object(ALL_NFT_INFOS),
+  //       txb.pure(personalities),
+  //       txb.pure(levels),
+  //       txb.pure(fames),
+  //       txb.pure(urls),
+  //       txb.pure(descs),
+  //     ],
+  //     target: UPDATE_NFT_INFOS_FN,
+  //   })
+
+  //   await suiClient.signAndExecuteTransactionBlock({
+  //     signer,
+  //     transactionBlock: txb,
+  //   })
+  // }
+
+  // const awardTouch = async () => {
+  //   const txb = new TransactionBlock()
+  //   txb.moveCall({
+  //     arguments: [
+  //       txb.object(ADMIN_CAP),
+  //       txb.object(TOPN_OBJ),
+  //       txb.pure(ACCOUNTS),
+  //       txb.pure(COIN_VALUES)
+  //     ],
+  //     target: UPDATE_TOPN_FN,
+  //   })
+
+  //   await suiClient.signAndExecuteTransactionBlock({
+  //     signer,
+  //     transactionBlock: txb,
+  //   })
+  // }
+
   const onMintOrView = async () => {
     if (fields) {
       setOpen(true)
@@ -96,22 +166,20 @@ function PersonalityList() {
 
       const txb = new TransactionBlock()
 
-      const item = list[current]
+      const item = list[current - 1]
+      const nft = NFT_INFOS.filter((i) => i.personality == item.personality && i.level == item.level)
       txb.moveCall({
         arguments: [
-          txb.object(ADMIN_CAP),
-          txb.pure.string('John'),
-          txb.pure.string(item.personality),
-          txb.pure.u8(Number(item.level)),
-          txb.pure.string("I'm Jogn"),
-          txb.pure.string(item.url.slice(0, item.url.lastIndexOf('/'))),
-          txb.pure.address(account.address),
+          txb.object(ELIGIBLE_OBJ),
+          txb.pure.string(nft[0].fame),
+          txb.pure.string(nft[0].personality),
+          txb.pure.string(nft[0].desc),
+          txb.pure.string(nft[0].url.slice(0, nft[0].url.lastIndexOf('/'))),
         ],
-        target: MINT_TO,
+        target: CLAIM_FN,
       })
 
       const tx = await signAndExecuteTransactionBlock({
-        signer,
         transactionBlock: txb,
       })
 
@@ -119,7 +187,6 @@ function PersonalityList() {
         digest: tx.digest,
       })
 
-      // setImageUrl(nft[0].url)
       fetchFields()
 
       conductor?.shoot()
