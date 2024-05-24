@@ -47,7 +47,7 @@ export function Profile() {
   }
 
   const getDecimal = async () => {
-    const res = await suiClient.getCoinMetadata({
+    const res: any = await suiClient.getCoinMetadata({
       coinType: TOUCH_TYPE,
     })
     if (res) return res.decimals
@@ -152,6 +152,12 @@ export function Profile() {
     await waitForTransactionBlock({
       digest: tx.digest,
     })
+
+    const totalBalance = await getBalance()
+    const decimal = await getDecimal()
+    if (decimal) {
+      setTouBalance((Number(totalBalance) / 10 ** decimal).toFixed(0))
+    }
   }
 
   return (
