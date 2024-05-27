@@ -9,17 +9,19 @@ import '@mysten/dapp-kit/dist/index.css'
 
 // Config options for the networks you want to connect to
 const { networkConfig } = createNetworkConfig({
+  testnet: { url: getFullnodeUrl('testnet') },
   devnet: { url: getFullnodeUrl('devnet') },
   mainnet: { url: getFullnodeUrl('mainnet') },
 })
+
 const defaultNetwork = import.meta.env.VITE_SUI_NETWORK || 'mainnet'
 
 export default function App() {
-  const queryClient = useMemo(() => new QueryClient({}), [])
+  const queryClient = useMemo(() => new QueryClient(), [])
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SuiClientProvider networks={networkConfig} defaultNetwork={defaultNetwork}>
+      <SuiClientProvider networks={networkConfig} network={defaultNetwork}>
         <WalletProvider>
           <RouterProvider router={createRouter()} />
           {/* <ReactQueryDevtools /> */}
