@@ -30,24 +30,27 @@ export const ELIGIBLE_OBJ = import.meta.env.VITE_SUI_CONTRACT_ELIGIBLE_OBJ
 export const ALL_NFT_INFOS = import.meta.env.VITE_SUI_CONTRACT_ALL_NFT_INFOS
 
 // functions
+function getContractAddress(pkg: string, mod: string, func: string) {
+  return `${pkg}::${mod}::${func}` as `${string}::${string}::${string}`
+}
 // coin
-export const UPDATE_AIRDROP_FN = `${PKG_ID}::airdrop::update_airdrop`
-export const CLEAR_AIRDROP_FN = `${PKG_ID}::airdrop::clear_airdrop`
-export const UPDATE_TOPN_FN = `${PKG_ID}::top_n::update_topn`
-export const CLAIM_AIRDROP_FN = `${PKG_ID}::touch::claim_airdrop`
-export const CLAIM_TOPN_FN = `${PKG_ID}::touch::claim_topn`
+export const UPDATE_AIRDROP_FN = getContractAddress(PKG_ID, 'airdrop', 'update_airdrop')
+export const CLEAR_AIRDROP_FN = getContractAddress(PKG_ID, 'airdrop', 'clear_airdrop')
+export const UPDATE_TOPN_FN = getContractAddress(PKG_ID, 'top_n', 'update_topn')
+export const CLAIM_AIRDROP_FN = getContractAddress(PKG_ID, 'touch', 'claim_airdrop')
+export const CLAIM_TOPN_FN = getContractAddress(PKG_ID, 'touch', 'claim_topn')
 // nft
-export const UPGRADE_NFT_FN = `${PKG_ID}::touch_level::upgrade`
-export const SET_TOUCH_NEED = `${PKG_ID}::touch_level::set_touch_need_value`
-export const UPDATE_ADDRS_FN = `${PKG_ID}::touch_level::update_addrs`
-export const CLAIM_FN = `${PKG_ID}::touch_level::claim`
+export const UPGRADE_NFT_FN = getContractAddress(PKG_ID, 'touch_level', 'upgrade')
+export const SET_TOUCH_NEED = getContractAddress(PKG_ID, 'touch_level', 'set_touch_need_value')
+export const UPDATE_ADDRS_FN = getContractAddress(PKG_ID, 'touch_level', 'update_addrs')
+export const CLAIM_FN = getContractAddress(PKG_ID, 'touch_level', 'claim')
 
-export const UPDATE_NFT_INFOS_FN = `${PKG_ID}::touch_level::update_touch_infos`
+export const UPDATE_NFT_INFOS_FN = getContractAddress(PKG_ID, 'touch_level', 'update_touch_infos')
 
 // types
-export const TOUCH_TYPE = `${PKG_ID}::touch::TOUCH`
-export const COIN_TYPE = `0x2::coin::Coin<${PKG_ID}::touch::TOUCH>`
-export const NFT_OBJ_TYPE = `${PKG_ID}::touch_level::TouchProfile`
+export const TOUCH_TYPE = getContractAddress(PKG_ID, 'touch', 'TOUCH')
+export const COIN_TYPE = getContractAddress('0x2', 'coin', `Coin<${getContractAddress(PKG_ID, 'touch', 'TOUCH')}>`)
+export const NFT_OBJ_TYPE = getContractAddress(PKG_ID, 'touch_level', 'TouchProfile')
 
 // =============== NFT infos ==========================
 export const NFT_INFOS = [
