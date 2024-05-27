@@ -17,18 +17,17 @@ export const NFT_LEVELS = [1, 1, 1]
 
 // ================ contract deploy info =================
 // objects
-// package
-export const PKG_ID = '0x2a36a08e058b11b6a22fb75adc471b657f6524a76b520c07598c9ae7901bc94c'
-export const ADMIN_CAP = '0x1ed149bcdde5838b5e9c9b6c445bda9f6b83d86b036f87c4b3f6b6259012993b'
+export const PKG_ID = import.meta.env.VITE_SUI_CONTRACT_PKG_ID
+export const ADMIN_CAP = import.meta.env.VITE_SUI_CONTRACT_ADMIN_CAP
 // coin
-export const AIRDROP_OBJ = '0xe7331af30eb2de2a5727487f3fe0d664f37e292226bb001a092d8b7d2063d251'
-export const TOPN_OBJ = '0xd3bbf02089d7a4d6f34ce5fb2313990fc933d5d9a2d731a77540927a64da6b29'
-export const TOUCH_SUPPLY = '0x79f6e4873bc651e703707c58f2ed863c0e68f0d042041ebc20a00dfd00019465'
+export const AIRDROP_OBJ = import.meta.env.VITE_SUI_CONTRACT_AIRDROP_OBJ
+export const TOPN_OBJ = import.meta.env.VITE_SUI_CONTRACT_TOPN_OBJ
+export const TOUCH_SUPPLY = import.meta.env.VITE_SUI_CONTRACT_TOUCH_SUPPLY
 // nft
-export const TOUCH_NEED_FOR = '0x45aca20dba630fdb1ddce2deb2db23c826808b316e111f58b00bd7e9c2294555'
-export const ELIGIBLE_OBJ = '0xa68f442543a448873bb09db1375d75f75a18729df387fe95341fcae2ed2ec519'
+export const TOUCH_NEED_FOR = import.meta.env.VITE_SUI_CONTRACT_TOUCH_NEED_FOR
+export const ELIGIBLE_OBJ = import.meta.env.VITE_SUI_CONTRACT_ELIGIBLE_OBJ
 
-export const ALL_NFT_INFOS = '0x32139e4ce83a0e23ee7bd34c6d4decbddec74415bf09b21c00b558196f39d42d'
+export const ALL_NFT_INFOS = import.meta.env.VITE_SUI_CONTRACT_ALL_NFT_INFOS
 
 // functions
 // coin
